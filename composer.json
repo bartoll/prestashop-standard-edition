@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "post-install-cmd": [
+      "chmod +x bash/download_release.sh && bash/download_release.sh"
+   ]
+  }
+}

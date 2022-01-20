@@ -1,0 +1,29 @@
+# Ignore all
+/*
+
+# Except themes
+!/themes/
+/themes/*
+!/themes/.htaccess
+#!/themes/name
+
+
+# Except my and third-party modules
+!/modules/
+/modules/*
+!/modules/.htaccess
+#!/modules/name/
+
+# Except override folder
+!/override/
+/override/*
+!/override/.htaccess
+
+# Except some other files
+!/bash/
+!composer.json
+!composer.lock
+!README.md
+!.gitignore
+!robots.txt
+
