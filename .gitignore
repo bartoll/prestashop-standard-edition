@@ -20,10 +20,11 @@
 !/override/.htaccess
 
 # Except some other files
+!README.md
+!LICENCE.md
 !/bash/
 !composer.json
 !composer.lock
-!README.md
 !.gitignore
 !robots.txt
 
