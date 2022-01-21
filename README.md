@@ -17,7 +17,7 @@ Read this page in documentation https://devdocs.prestashop.com/1.7/basics/instal
 ```bash
 $ composer create-project bartoll/prestashop-standard-edition {project_name} dev-main
 $ cd {project_name}
-$ composer get-presta {presta_version}
+$ composer get-presta 1.7.8.2
 ```
 
 ## Installing an application with command line
