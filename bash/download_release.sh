@@ -2,6 +2,7 @@
 
 set -x
 
+# Variables
 presta_version=${1:-'1.7.8.2'}
 download_link="https://github.com/PrestaShop/PrestaShop/releases/download/${presta_version}/prestashop_${presta_version}.zip"
 cur_dir=$(pwd)
@@ -26,7 +27,7 @@ zip -d prestashop.zip composer.lock
 unzip -d "${cur_dir}" -o -q prestashop.zip
 rm prestashop.zip
 
-
+# Clean after work
 cd "${cur_dir}"
 rm -rf ${temp_dir}
 

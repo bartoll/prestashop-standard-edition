@@ -3,6 +3,11 @@
   "description": "The starter-kit for new project based on Prestashop framework",
   "license": "OSL-3.0",
   "type": "project",
+  "authors": [
+    {
+      "name": "Bartlomiej Czesak"
+    }        
+  ],
   
   "scripts": {
     "get-presta": [
