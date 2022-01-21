@@ -15,7 +15,7 @@ Read this page in documentation https://devdocs.prestashop.com/1.7/basics/instal
 
 ## Creating a new project and getting Prestashop release package
 ```bash
-$ git clone https://github.com/bartoll/prestashop-standard-edition {project_name}
+$ composer create-project bartoll/prestashop-standard-edition {project_name}
 $ cd {project_name}
 $ composer get-presta {presta_version}
 ```
