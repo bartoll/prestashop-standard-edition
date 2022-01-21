@@ -1,7 +1,7 @@
 Prestashop Standard Edition
 =====================================
 
-Welcome to Bartoll repository.
+Welcome to Bartoll's repository.
 
 This repository is used to create a new Ecommerce project based on Prestashop framework.
 
