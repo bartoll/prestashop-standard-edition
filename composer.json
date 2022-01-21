@@ -1,7 +1,16 @@
 {
+  "name": "bartoll/prestashop_standard",
+  "description": "The starter-kit for new project based on Prestashop framework",
+  "license": "OSL-3.0",
+  "type": "project",
+  
   "scripts": {
-    "post-install-cmd": [
+    "get-presta": [
       "chmod +x bash/download_release.sh && bash/download_release.sh"
    ]
+  },
+  
+  "scripts-descriptions": {
+    "get-presta": "Download Prestashop release package and unzip it in project's folder"
   }
 }

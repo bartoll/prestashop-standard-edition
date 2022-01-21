@@ -15,8 +15,8 @@ Read this page in documentation https://devdocs.prestashop.com/1.7/basics/instal
 
 ## Creating a project and starting the Ecommerce
 ```bash
-$ git clone https://github.com/bartoll/prestashop_standard project_name
-$ cd project_name
-$ composer install
+$ git clone https://github.com/bartoll/prestashop_standard {project_name}
+$ cd {project_name}
+$ composer get-presta {presta_version}
 ```
 

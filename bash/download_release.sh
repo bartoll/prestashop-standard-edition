@@ -2,9 +2,7 @@
 
 set -x
 
-echo "Hello World!"
-
-presta_version="1.7.8.2";
+presta_version=${1:-'1.7.8.2'}
 download_link="https://github.com/PrestaShop/PrestaShop/releases/download/${presta_version}/prestashop_${presta_version}.zip"
 cur_dir=$(pwd)
 
@@ -33,5 +31,5 @@ cd "${cur_dir}"
 rm -rf ${temp_dir}
 
 # Say success
-echo "Finished!"
+echo "Prestashop ${presta_version} release package has been downloaded and unzipped!"
 
