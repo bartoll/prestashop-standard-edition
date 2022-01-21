@@ -15,7 +15,7 @@ Read this page in documentation https://devdocs.prestashop.com/1.7/basics/instal
 
 ## Creating a new project and getting Prestashop release package
 ```bash
-$ git clone https://github.com/bartoll/prestashop_standard {project_name}
+$ git clone https://github.com/bartoll/prestashop-standard-edition {project_name}
 $ cd {project_name}
 $ composer get-presta {presta_version}
 ```
@@ -45,4 +45,31 @@ $ php install/index_cli.php \
 	--fixtures=0
 ```
 More details: https://doc.prestashop.com/display/PS17/Installing+PrestaShop+using+the+command-line+script
+
+
+Development a new project
+-------------------------
+
+## How to work with GIT?
+You will only track changes to those files that are not the core of Prestashop. This means custom or third-party themes and modules, and any files in the "overrides" folder.
+You should modify the .gitignore file every time you want to add any module or theme to the tracked files.
+
+If you need to modify core files, you can add these files to GIT with the special '--forced' argument.
+First, add and commit the original files with no changes. Second, add and commit the changed files. 
+```bash
+git add --force my/ignore/file.foo
+git commit -m "Add this file despite being ignored"
+```
+
+## How to configure PrestaShop to work with another domain?
+You can transfer your database between different environments (e.g. localhost -> production).
+First, install the application from scratch as described above.
+During this process, Prestashop will download all 'module addons' (cannot be installed with the composer).
+Then restore and replace the existing database with your "dump" file.
+Third, make the necessary changes to:
+```
+- /app/config/parameters.php file
+- ps_configuration table in database (PS_SHOP_DOMAIN, PS_SHOP_DOMAIN_SSL)
+- shop_url table in database (domain, domain_ssl)
+```
 
