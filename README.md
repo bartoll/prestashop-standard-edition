@@ -70,7 +70,7 @@ Then restore and replace the existing database with your "dump" file.
 Third, make the necessary changes to:
 1. files:
 ```
-- /app/config/parameters.php file
+/app/config/parameters.php
 ```
 2. database:
 ```
