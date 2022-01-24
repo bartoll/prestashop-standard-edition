@@ -68,9 +68,16 @@ First, install the application from scratch as described above.
 During this process, Prestashop will download all 'module addons' (cannot be installed with the composer).
 Then restore and replace the existing database with your "dump" file.
 Third, make the necessary changes to:
+1. files:
 ```
 - /app/config/parameters.php file
-- ps_configuration table in database (PS_SHOP_DOMAIN, PS_SHOP_DOMAIN_SSL)
-- shop_url table in database (domain, domain_ssl)
+```
+2. database:
+```
+UPDATE ps_configuration SET value='new.prestashop.local' WHERE name='PS_SHOP_DOMAIN' LIMIT 1;
+
+UPDATE ps_configuration SET value='new.prestashop.local' WHERE name='PS_SHOP_DOMAIN_SSL' LIMIT 1;
+
+UPDATE ps_shop_url SET domain='new.prestashop.local', domain_ssl='new.prestashop.local' WHERE id_shop_url=1 LIMIT 1;
 ```
 
